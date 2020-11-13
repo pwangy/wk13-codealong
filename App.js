@@ -14,12 +14,10 @@ const Title = styled.Text`
   color: palevioletred;
 `
 
-const App = () => {
+export default function App() {
   return (
     <Container>
       <Houses />
     </Container>
   )
 }
-
-export default App

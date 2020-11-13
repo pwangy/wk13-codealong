@@ -12,9 +12,8 @@ const Title = styled.Text`
   color: palevioletred;
 `
 
-export function Houses() {
-  const [houses, setHouses] = () => useState([])
-
+export const Houses = () => {
+  const [houses, setHouses] = useState([])
 
   useEffect(() => {
     const housesApi = 'https://www.anapioficeandfire.com/api/houses'
@@ -22,6 +21,7 @@ export function Houses() {
       .then((res) => res.json())
       .then((json) => setHouses(json))
   }, [])
+
   return (
     <Container>
       <Title>Houses</Title>
