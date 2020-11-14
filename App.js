@@ -7,12 +7,9 @@ const Container = styled.View`
   justify-content: center;
   align-items: center;
 `
-const TopContainer = styled.View`
-flex: 1;
+const TopContainer = styled(Container)`
 width: 100%;
 background-color: #222222;
-justify-content: center;
-align-items: center;
 `
 
 const TopHeader = styled.Text`
@@ -23,7 +20,7 @@ const TopHeader = styled.Text`
 const BottomContainer = styled.View`
   flex: 3;
   width: 100%;
-  background-color: #fff;
+  background-color: #fff; 
   justify-content: center;
   align-items: center;
 `
@@ -62,6 +59,7 @@ const App = () => {
       </TopContainer>
 
       <BottomContainer>
+        <BottomText>{count}</BottomText>
         <TouchableOpacity onPress={onIncrement}>
           <Text>Add +1</Text>
         </TouchableOpacity>
