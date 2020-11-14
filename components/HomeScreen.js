@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components/native'
 import { Button } from 'react-native'
 
@@ -21,7 +21,7 @@ const HomeScreen = ({ navigation }) => {
   })
 
   const navigateToInfo = () => {
-    navigation.navigate("Info", {name: "Peggy" })
+    navigation.navigate("Info", {thing: "Peggy" })
   }
 
   return (

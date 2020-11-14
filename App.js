@@ -1,14 +1,10 @@
-import React, { useState } from 'react'
-// import styled from 'styled-components/native'
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import 'react-native-gesture-handler'
+// import 'react-native-gesture-handler'
 
 import HomeScreen from './components/HomeScreen'
 import InfoScreen from './components/InfoScreen'
-
-// Navigation Setup
-// https://reactnative.dev/docs/navigation
 
 const Stack = createStackNavigator()
 
@@ -18,7 +14,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen 
           name="Home"
-          compoenent={HomeScreen}
+          component={HomeScreen}
           options={{ title: "Welcome" }}
         />
         <Stack.Screen 

@@ -32,14 +32,14 @@ const InfoScreen = ({ navigation, route }) => {
   }, [])
 
   let { x, y, z } = data;
-  let xOffset = x * -60 || 0
-  let yOffset = z * -120 || 0
+  let xOffset = x * 60 || 0
+  let yOffset = y * -120 || 0
   return (
     <InfoContainer source={backgroundImage}>
       <InfoText xOffset={xOffset} yOffset={yOffset}>
         Info Screen
       </InfoText>
-      <Text>{route.params.data}</Text>
+      <Text>{route.params.thing}</Text>
       <Text>
         x: {x} y: {y} z: {z}
       </Text>
