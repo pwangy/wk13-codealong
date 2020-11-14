@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-// import 'react-native-gesture-handler'
+import 'react-native-gesture-handler'
 
 import HomeScreen from './components/HomeScreen'
 import InfoScreen from './components/InfoScreen'
@@ -9,7 +9,7 @@ import InfoScreen from './components/InfoScreen'
 const Stack = createStackNavigator()
 
 const App = () => {
-  return (
+  return ( 
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen 
