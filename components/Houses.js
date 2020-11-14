@@ -8,6 +8,11 @@ const Title = styled.Text`
   color: palevioletred;
 `
 
+const LottieButton = styled.TouchableOpacity`
+  background: blue;
+  color: white;
+`
+
 export const Houses = () => {
   const [houses, setHouses] = useState([])
   const housesApi = 'https://www.anapioficeandfire.com/api/houses'
@@ -20,6 +25,7 @@ export const Houses = () => {
 
   return (
     <Container>
+      <LottieButton onPress={(navigation.navigate('Lottie'))}><Title>ANIMATION</Title></LottieButton>
       <Title>Houses</Title>
       {houses.map((house) => (
         <Title key={house.id}>{house.name}</Title>

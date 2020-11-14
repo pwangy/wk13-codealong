@@ -1,12 +1,21 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-import { Container } from './components/Container'
 import { Houses } from './components/Houses'
+// import { Lottie } from './components/Lottie'
 
-export default function App() {
+const Stack = createStackNavigator()
+
+const App = () => {
   return (
-    <Container>
-      <Houses />
-    </Container>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='Game of Thrones' component={Houses} />
+        {/* <Stack.Screen name='Lottie' component={Lottie} /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
+
+export default App
