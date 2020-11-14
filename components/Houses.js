@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components/native'
 
 import { Container } from './Container'
+
+const Title = styled.Text`
+  font-size 24px;
+  color: palevioletred;
+`
 
 export const Houses = () => {
   const [houses, setHouses] = useState([])
@@ -16,7 +22,7 @@ export const Houses = () => {
     <Container>
       <Title>Houses</Title>
       {houses.map((house) => (
-        <Title>{house.name}</Title>
+        <Title key={house.id}>{house.name}</Title>
       ))}
     </Container>
   )
