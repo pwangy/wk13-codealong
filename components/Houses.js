@@ -25,7 +25,7 @@ export const Houses = () => {
 
   return (
     <Container>
-      <LottieButton onPress={(navigation.navigate('Lottie'))}><Title>ANIMATION</Title></LottieButton>
+      {/* <LottieButton onPress={(navigation.navigate('Lottie'))}><Title>ANIMATION</Title></LottieButton> */}
       <Title>Houses</Title>
       {houses.map((house) => (
         <Title key={house.id}>{house.name}</Title>
